@@ -9,5 +9,5 @@ public interface EmployeeService {
     Employee save(Employee employee);
     Employee update(Integer id, Employee employee);
     void delete(Integer id);
-    Employee findEmployeeById();
+    Employee findEmployeeById(Integer id);
 }

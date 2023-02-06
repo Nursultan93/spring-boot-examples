@@ -41,17 +41,21 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public Employee update(Integer id, Employee employee) {
-        return null;
+
+
+        employeeMap.put(id, employee);
+
+        return findEmployeeById(id);
     }
 
     @Override
     public void delete(Integer id) {
-
+        employeeMap.remove(id);
     }
 
 
     @Override
-    public Employee findEmployeeById() {
-        return null;
+    public Employee findEmployeeById(Integer id) {
+        return employeeMap.get(id);
     }
 }
